@@ -1,0 +1,256 @@
+/* The container must be positioned relative: */
+.custom-select {
+  position: relative;
+  font-family: Arial;
+}
+
+.custom-select select {
+  display: none;
+  /*hide original SELECT element: */
+}
+
+.select-selected {
+  background-color: rgba(255, 255, 255, 0.05);
+  border-radius: 10px;
+}
+
+/* Style the arrow inside the select element: */
+.select-selected:after {
+  position: absolute;
+  content: "";
+  top: 14px;
+  right: 18px;
+  width: 0;
+  height: 0;
+  border: 6px solid transparent;
+  border-color: #fff transparent transparent transparent;
+}
+
+/* Point the arrow upwards when the select box is open (active): */
+.select-selected.select-arrow-active:after {
+  border-color: transparent transparent #fff transparent;
+  top: 7px;
+}
+
+/* style the items (options), including the selected item: */
+.select-items div, .select-selected {
+  color: #ffffff;
+  padding: 8px 16px;
+  border: 1px solid transparent;
+  border-color: transparent transparent rgba(0, 0, 0, 0.1) transparent;
+  cursor: pointer;
+}
+
+/* Style items (options): */
+.select-items {
+  position: absolute;
+  background-color: #2a3f55;
+  top: 100%;
+  left: 0;
+  right: 0;
+  z-index: 99;
+}
+
+/* Hide the items when the select box is closed: */
+.select-hide {
+  display: none;
+}
+
+.select-items div:hover, .same-as-selected {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+.drop_down_field {
+  margin: 40px 15px 40px 15px;
+}
+
+.dropdown_select {
+  display: block;
+  background-color: rgba(255, 255, 255, 0.05);
+  color: white;
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  font-size: 1.3rem;
+  font-weight: 400;
+  text-align: center;
+}
+
+.null_transaction_div {
+  display: none;
+}
+
+@media screen and (max-width: 332px) {
+  .null_transaction_div a {
+    font-size: xx-small;
+  }
+}
+
+.card_stripped_row {
+  text-align: center;
+}
+
+.card_stripped_row .row {
+  display: block;
+  background-color: rgba(255, 255, 255, 0.05);
+  color: white;
+  border-radius: 25px;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  font-size: 1.2rem;
+  font-weight: 400;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  font-style: italic;
+  font-weight: bold;
+  margin-bottom: 35px;
+}
+
+.card_stripped_row .start_balance {
+  color: rgba(230, 203, 164, 0.95);
+  font-size: 1.1rem;
+  margin-top: 7px;
+}
+
+.card_stripped_row .end_balance {
+  color: #F7B7B7;
+  font-size: 1.1rem;
+  margin-top: 7px;
+}
+
+.card_stripped_row .btn {
+  background: transparent;
+  border-radius: 10px;
+  width: 100%;
+  background-color: #2a3f55;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.card_stripped_row .btn img {
+  width: 10px;
+  height: auto;
+}
+
+/*to be deleted except i need to add chart img link */
+.pre_table_info {
+  /* margin-top:30px if the back btn is removed */
+}
+
+.pre_table_info img {
+  width: 26px;
+  margin-top: 13px;
+}
+
+.pre_table_info img:hover {
+  width: 34px;
+}
+
+table {
+  border: 1.5px inset rgba(255, 255, 255, 0.1);
+  margin-bottom: 30px;
+  margin-top: 15px;
+}
+
+table thead {
+  background-color: #755f7e2c;
+}
+
+table .td_withdraw img {
+  width: 10px;
+  margin-right: 15px;
+}
+
+table .table_bottom {
+  background-color: #755f7e2c;
+  height: 3pc;
+}
+
+.cardlet {
+  background-color: #755f7e2c;
+  border-radius: 10px;
+  width: 80%;
+  padding-top: 1px;
+  padding-bottom: 1px;
+  font-weight: bold;
+  -webkit-box-shadow: 1px 1px 1px rgba(71, 74, 75, 0.2);
+          box-shadow: 1px 1px 1px rgba(71, 74, 75, 0.2);
+}
+
+.cardlet:hover {
+  background-color: rgba(110, 101, 101, 0.644);
+}
+
+.cardlet .p_balance {
+  color: #E5F06A;
+  margin-top: -10px;
+}
+
+.cardlet .p_outflow {
+  color: #F7B7B7;
+  margin-top: -10px;
+}
+
+.cardlet .p_inflow {
+  color: rgba(230, 203, 164, 0.95);
+  margin-top: -10px;
+}
+
+.submit_btn {
+  background: transparent;
+  border-radius: 10px;
+  width: 60%;
+  background-color: #2a3f55;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-transform: capitalize;
+  font-weight: bold;
+}
+
+.submit_btn:hover {
+  background-color: rgba(90, 112, 131, 0.8);
+}
+
+.custom_btn {
+  background: transparent;
+  border-radius: 10px;
+  width: 20%;
+  background-color: #2a3f55;
+  font-weight: bold;
+  margin-top: 20px;
+}
+
+.custom_btn:hover {
+  background-color: rgba(90, 112, 131, 0.8);
+}
+
+.toast_comment {
+  background: -webkit-gradient(linear, left top, right bottom, from(#2a3b3b), to(#3c494d));
+  background: linear-gradient(to right bottom, #2a3b3b, #3c494d);
+  border-radius: 30px;
+  -webkit-box-shadow: 1px 1px 4px #3819286b;
+          box-shadow: 1px 1px 4px #3819286b;
+  text-align: center;
+  width: 60%;
+}
+/*# sourceMappingURL=index_sax.css.map */

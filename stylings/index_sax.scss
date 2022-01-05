@@ -1,0 +1,146 @@
+@import './components';
+@import './selectag';
+
+
+.drop_down_field{
+    margin: 40px 15px 40px 15px;
+}
+.dropdown_select{
+   @include morphedRectangle(block, $select_field_border_radius, 1.3rem);
+   text-align: center;   
+}
+
+.null_transaction_div{
+    display: none;
+    @media screen and (max-width : 332px) {
+        a{
+            font-size: xx-small;
+        } 
+    }
+    
+}
+
+.card_stripped_row{
+    text-align: center; 
+    .row{
+        @include morphedRectangle(block,$row_border_radius,1.2rem); 
+        padding-top: 5px;
+        padding-bottom: 5px;
+        font-style: italic;
+        font-weight: bold;
+        margin-bottom: 35px;
+    }
+
+    .start_balance{
+        color: $inflow_text_color;
+        font-size: 1.1rem;
+        margin-top: 7px;
+    }
+
+    .end_balance{
+        color:$start_balance_text_color;
+        font-size: 1.1rem;
+        margin-top: 7px;
+    }
+
+    .btn{
+        @include custom_btn(100%);
+        @include flexing(row);
+
+        img{
+            width:10px;
+            height: auto;
+        }
+    }
+
+}
+
+/*to be deleted except i need to add chart img link */
+.pre_table_info{
+   
+    /* margin-top:30px if the back btn is removed */
+    img{
+        width: 26px;
+        margin-top: 13px;
+        &:hover{
+            width: 34px;
+        }
+    }
+}
+table{
+    border: 1.5px inset rgba(255, 255, 255, 0.1);
+    margin-bottom: 30px;
+    margin-top: 15px;
+    thead{
+        @include tableHeadBottom;
+    }
+
+    .td_withdraw img{
+        width: 10px;
+        margin-right: 15px;
+    }
+
+    .table_bottom{
+       @include tableHeadBottom;
+       height: 3pc;
+    }
+}
+
+.cardlet{
+    @include tableHeadBottom;
+    border-radius: 10px;
+    width: 80%;
+    padding-top:1px;
+    padding-bottom: 1px;
+    font-weight: bold;
+    box-shadow: 1px 1px 1px rgba(71, 74, 75, 0.2);
+
+    &:hover{
+        background-color: rgba(110, 101, 101, 0.644);
+    }
+
+    .p_balance{
+        color:$end_balance_text_color;
+        @include p_tag(-10px);
+    }
+    .p_outflow{
+        color:$start_balance_text_color;
+        @include p_tag(-10px);
+    }
+    .p_inflow{
+        color: $inflow_text_color;
+        @include p_tag(-10px);
+    }
+   
+  
+}
+
+.submit_btn{
+    @include custom_btn(60%);
+   
+    @include flexing(row);
+    text-transform: capitalize;
+    font-weight: bold;
+    &:hover{
+        background-color: $btn_hover_color;
+    }
+}
+
+.custom_btn{
+    @include custom_btn(20%);
+    font-weight: bold;
+    margin-top: 20px;
+    &:hover{
+        background-color: $btn_hover_color;
+    }
+}
+
+
+.toast_comment{
+    background: linear-gradient(to right bottom, #2a3b3b, rgb(60, 73, 77) );
+    border-radius: 30px;
+    box-shadow: 1px 1px 4px #3819286b;
+    text-align: center;
+    width:60%;
+}
+

@@ -1,0 +1,41 @@
+$select_field_border_radius: 10px;
+$row_border_radius: 25px;
+$start_balance_text_color:#F7B7B7;
+$end_balance_text_color:#E5F06A;
+$inflow_text_color:rgba(230, 203, 164, 0.95);
+$btn_hover_color: rgba(90, 112, 131, 0.8);
+
+@mixin tableHeadBottom{
+   //background-color: rgba(255, 255, 255, 0.05);
+   background-color: #755f7e2c;
+}
+
+@mixin p_tag($margin_top_size){
+    margin-top: $margin_top_size;
+    
+}
+
+@mixin morphedRectangle($display_type, $border_radius, $font_size) {
+    display:$display_type;
+    background-color: rgba(255,255,255,0.05);
+    color:white;
+    border-radius: $border_radius;
+    border:1px solid rgba(255,255,255,0.05);
+    font-size:  $font_size;
+    font-weight:400;
+}
+
+@mixin flexing($direction) {
+    display: flex;
+    flex-direction: $direction;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+
+@mixin custom_btn($btn_width){
+    background: transparent;
+    border-radius: 10px;
+    width: $btn_width;
+    background-color:rgb(42, 63, 85);
+}

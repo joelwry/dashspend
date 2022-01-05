@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+      <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+      <title>Dashspend Table</title>
+    <!-- Material Icon CDN -->
+      <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!-- Materialize CSS CDN -->
+      <link rel="stylesheet" href="stylings/materialize.css">
+    <!-- Your custom styles -->
+      <link rel="stylesheet" href="stylings/index_sax.css">
+   
+    <style>
+      body {
+        display: flex;
+        min-height: 100vh;
+        flex-direction: column;
+        background-color: #122A2A;
+
+        }
+      main {
+        flex: 1 0 auto;
+        color:white;
+      }   
+    </style>
+  </head>
+
+  <body>
+     <!--global menu navigation header  bar-->
+    <header>
+      <nav class="grey darken-3">
+        <div class="nav-wrapper">
+          <div class="container">
+            <ul class="left menu_link">
+              <li><a href="index.html">Transactions</a></li>   
+              <li><a href="update.html">Update</a></li>
+              </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      
+      <div class="container">
+        <!--button for going back to previous page-->
+        <div>
+          <a class="btn custom_btn" href="index.html">back</a>
+        </div>
+        
+        <!-- this section display transactions for a particular month in table format-->
+        <div class="table_div">
+           
+            <div class="pre_table_section">
+              <div class="row">
+                <div class="col l12 s12 pre_table_info center">
+                   <h5 class="month_year_header"></h5>
+                   
+                </div> 
+               
+              </div>
+            </div>
+            <table class="responsive centered">
+              <thead>
+                <tr>
+                  <th data-field="type">Type</th>
+                  <th data-field="trans_amount">Trans Amount</th>
+                  <th data-field="balance">Purpose</th>
+                  <th></th>
+                  
+                </tr>
+              </thead>
+              <tbody>
+              
+               <tr class="table_bottom">
+                 <td></td><td></td><td></td><td></td>
+              </tr>
+              </tbody>
+             
+            </table>
+        </div>
+        
+        <!--this section includes a summary card of total spending and income for that particular month in a month it also
+        include the balance left -->
+        <div class="row grouped_cardlet">
+            <div class="col l4 s4">
+              <div class="cardlet inflow center">
+              <p  class="p_header">Inflow</p>
+              <p class="p_inflow"></p>
+              </div>
+            </div>
+            <div class="col l4 s4">
+              <div class="cardlet outflow center">
+              <p  class="p_header">Outflow</p>
+              <p class="p_outflow"></p>
+              </div>
+            </div>
+            <div class="col l4 s4">
+              <div class="cardlet gross center">
+              <p class="p_header">Balance</p>
+              <p class="p_balance"></p>
+              </div>
+            </div>
+            
+        </div>
+
+      </div>
+    </main>
+    
+   
+  </body>
+  <script src="scripts/materialize.js"></script>
+  <script src="scripts/init.js"></script>
+  <script src="scripts/table_script.js"> </script>
+</html>

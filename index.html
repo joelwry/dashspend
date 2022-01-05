@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no"/>
+		<meta property="og:type" content="Web App">
+		<meta name="description" property="og:description" content="Dashspend is a simple budget tracking app that help users monitor their cash flow (inbound or outbound cash flow).">
+		<meta name="image" property="og:image" content="image_fold/tableview.png">
+		<meta property="og:image:width" content="320">
+		<meta property="og:image:height" content="350">
+		<meta name="author" content="joelwry">
+      <title>Dashpend</title>
+    <!-- Material Icon CDN -->
+      <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!-- Materialize CSS CDN -->
+      <link rel="stylesheet" href="stylings/materialize.css">
+    <!-- Your custom styles -->
+      <link rel="stylesheet" href="stylings/index_sax.css">
+  
+    <style>
+      body {
+        display: flex;
+        min-height: 100vh;
+        flex-direction: column;
+        background-color: #122A2A;
+
+        }
+      main {
+        flex: 1 0 auto;
+        color:white;
+      }   
+    </style>
+  </head>
+  <body>
+
+    <!-- menu navigation bar-->
+    <header>
+      <nav class="grey darken-3">
+        <div class="nav-wrapper">
+          <div class="container">
+            <ul class="left menu_link">
+                <li><a href="#">Transactions</a></li>   
+                <li><a href="update.html">Update</a></li>
+              </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      
+      <div class="container">
+        <!-- year drop down selector for showing transactions that occured in a particular year-->
+        <div class="drop_down_field">
+            <div class="row">
+                <div class="col offset-l2 offset-s2 l8 s8 left_field year_selector custom-select">   
+                    <select class="dropdown_select year_select">
+                      
+                      <option value="">year</option>
+
+                      
+                    </select>    
+                </div>
+            </div>  
+            
+        </div>
+
+        <!-- This display is to be displayed if no transaction has occured at all. It is expected to be on display as you launch this application
+        for the very first time -->
+        <div class="null_transaction_div center">
+          <div class="row">
+            <h5>Get started  </h5>
+            <p>Your transactions are empty. click button below to start monitoring and managing your finance</p>       
+          </div>
+          <div class="row">
+            <a class="btn submit_btn" href="update.html" style='margin: 5px auto'>create a transaction</a></div>
+        </div>
+        
+        <!-- List of card row transactions if any -->
+        <div class="card_stripped_row">
+                
+        </div>
+
+      </div>
+    </main>
+    
+   
+  </body>
+  
+  <script src="scripts/materialize.js"></script>
+  <script src="scripts/init.js"></script>
+  <script src="scripts/index_script.js"></script>
+  <script src="scripts/drop_down_script.js"></script>
+</html>
