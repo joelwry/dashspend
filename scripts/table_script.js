@@ -8,12 +8,13 @@ const random = (min,max)=>Math.floor(Math.random()*(max-min))+min;
 
 let row_div = []
 
+// retrieving parameter passed into url link
 var param = new URLSearchParams(window.location.search)
 const data = JSON.parse(param.get('month_year'))
 const data2 = JSON.parse(param.get('withdraw_deposit'))
 let retrieved_local_storage = JSON.parse(localStorage.getItem("transactions") || "[]");
 
-
+// total inflow, outflow and balance into card pages 
 let total_deposit = Number(data2["total_deposits"])
 let total_withdraw = Number(data2["total_withdraws"])
 let balance = total_deposit - total_withdraw
@@ -28,6 +29,7 @@ balance < 0 ?
   
 header.innerText = data["month"]+" "+data["year"];
 
+// this function create a table row component for each data entry 
 const createTableRow = (element, transaction_type) =>{
     
   //creating a table row to hold data
@@ -63,6 +65,8 @@ const createTableRow = (element, transaction_type) =>{
 
 }
 
+// executing the create row function based on either data entry is a deposit or withdrawal
+
 if(data2["deposits"]){
     data2["deposits"].forEach(element => {
         tb = createTableRow(element, "deposit")
@@ -89,6 +93,7 @@ for(let i = 0; i<row_length; i++){
   tbody.insertBefore(row_item[0], tbody.lastElementChild)
 }
 
+// adding clicking event function for deleting a table row entry from the page and local storage
 table.addEventListener("dblclick",(e)=>{
   if(e.target.className==="delete_row"){
     key = e.target.parentElement.parentElement.querySelector(".key_tag").innerText

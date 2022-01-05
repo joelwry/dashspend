@@ -1,4 +1,6 @@
 
+// selecting dom element in index.html page
+
 var drop_down_year = document.querySelector(".dropdown_select.year_select");
 var cards = document.querySelector(".card_stripped_row");
 var overall_div_year = document.querySelector(".left_field.year_selector");
