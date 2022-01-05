@@ -30,10 +30,10 @@ document.addEventListener('DOMContentLoaded', function() {
     var time_instance = M.Timepicker.init(time_picker,{"onSelect":clickedTime,twelveHour:false});
   
 
-    
+  // event listener on form submit button 
    submit_btn.addEventListener('click', form_submit);
 
-   //PROCESS FORM SUBMISSION EVENT
+   //Function for PROCESSING FORM SUBMISSION. fUNCTION will be called through an event listener
    function form_submit(event){
     event.preventDefault(); 
     let check_status = form.checkValidity();
@@ -50,7 +50,9 @@ document.addEventListener('DOMContentLoaded', function() {
         }
         
         retrieved_local_storage.push(approved_transaction_object);
-        //saving
+       
+        //saving form data to local storage
+
         localStorage.setItem("transactions", JSON.stringify(retrieved_local_storage))
         const comment ="$" +form.amount.value+" will be processed for "+form.drop_down_list.value;
         M.toast({html: comment, classes: 'toast_comment'});

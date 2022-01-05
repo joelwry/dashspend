@@ -215,7 +215,5 @@ let main_operation = ()=>{
     }
 }
 
-function compareMonths(obj1, obj2){
-    
-}
+// init main operation so as to make relevant call to functions defined above 
 main_operation();
